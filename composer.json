@@ -1,0 +1,8 @@
+{
+	"autoload": {
+		"psr-4": {"CorsDemo\\": "src/"}
+	},
+	"require": {
+		"slim/slim": "2.*"
+	}
+}
