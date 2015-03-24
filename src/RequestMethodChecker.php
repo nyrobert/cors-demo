@@ -14,14 +14,7 @@ class RequestMethodChecker
 		$this->app = $app;
 	}
 
-	public static function create()
-	{
-		return new self(
-			\Slim\Slim::getInstance()
-		);
-	}
-
-	public function _check(\Slim\Route $route)
+	public function check(\Slim\Route $route)
 	{
 		switch ($route->getName()) {
 			case 'login':
@@ -30,11 +23,6 @@ class RequestMethodChecker
 				}
 				break;
 		}
-	}
-
-	public static function check(\Slim\Route $route)
-	{
-		self::create()->_check($route);
 	}
 
 	private function handleInvalidRequestMethod()

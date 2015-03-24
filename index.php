@@ -6,10 +6,9 @@ $session = new \CorsDemo\SessionHandler();
 $session->start();
 
 $app = new \Slim\Slim();
-$app->setName('cors-demo');
 
-$protocolChecker      = ['\CorsDemo\ProtocolChecker', 'check'];
-$requestMethodChecker = ['\CorsDemo\RequestMethodChecker', 'check'];
+$protocolChecker      = [new \CorsDemo\ProtocolChecker($app), 'check'];
+$requestMethodChecker = [new \CorsDemo\RequestMethodChecker($app), 'check'];
 
 $app->get('/', $protocolChecker, function () use ($app) {
 	$app->render('index.template.php');

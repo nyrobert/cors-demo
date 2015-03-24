@@ -19,6 +19,7 @@ class SessionHandler
 		if (isset($_SESSION[$name])) {
 			return $_SESSION[$name];
 		}
+		return null;
 	}
 
 	public function set($name, $value)

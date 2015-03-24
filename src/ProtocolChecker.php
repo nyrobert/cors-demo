@@ -17,14 +17,7 @@ class ProtocolChecker
 		$this->app = $app;
 	}
 
-	public static function create()
-	{
-		return new self(
-			\Slim\Slim::getInstance()
-		);
-	}
-
-	public function _check(\Slim\Route $route)
+	public function check(\Slim\Route $route)
 	{
 		$protocol = $this->app->request->getScheme();
 
@@ -45,11 +38,6 @@ class ProtocolChecker
 				}
 				break;
 		}
-	}
-
-	public static function check(\Slim\Route $route)
-	{
-		self::create()->_check($route);
 	}
 
 	private function handleInvalidProtocol()
