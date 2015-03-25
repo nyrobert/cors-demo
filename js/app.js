@@ -32,7 +32,7 @@ $(function() {
 			if (isLogIn) {
 				updatePageToLoggedInState(response.user);
 			} else {
-				$.removeCookie('userLoggedIn', { path: '/' });
+				$.removeCookie('userLoggedIn', {path: '/'});
 				location.reload();
 			}
 		});
@@ -42,11 +42,10 @@ $(function() {
 		userWidget.find('p').html('<strong>' + user + '</strong> is logged in.');
 		userWidget.find('button').text('Log out').attr('data-mode', 'logOut');
 
-		$.cookie('userLoggedIn', 1, { path: '/' });
+		$.cookie('userLoggedIn', 1, {path: '/'});
 	}
 
-	function getUrlPrefix()
-	{
+	function getUrlPrefix() {
 		return location.hostname + location.pathname;
 	}
 });
