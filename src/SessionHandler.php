@@ -27,11 +27,10 @@ class SessionHandler
 		$_SESSION[$name] = $value;
 	}
 
-	public function kill()
+	public function destroy()
 	{
-		setcookie(session_name(), '', time() - 3600, '/', null, true, true);
-		session_unset();
-		session_destroy();
 		$_SESSION = array();
+		setcookie(session_name(), '', time() - 3600, '/', null, true, true);
+		session_destroy();
 	}
 }

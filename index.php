@@ -32,7 +32,7 @@ $app->post('/login', $protocolChecker, $requestMethodChecker, function () use ($
 $app->post('/logout', $protocolChecker, $requestMethodChecker, function () use ($app, $session) {
 	(new \CorsDemo\HeaderHelper())->setHeaders($app);
 
-	$session->kill();
+	$session->destroy();
 
 	$app->response->body(
 		json_encode(
