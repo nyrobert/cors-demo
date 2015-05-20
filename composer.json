@@ -3,6 +3,7 @@
 		"psr-4": {"CorsDemo\\": "src/"}
 	},
 	"require": {
+		"php": ">=5.4.0",
 		"slim/slim": "2.*"
 	}
 }
