@@ -7,7 +7,7 @@
 * [PHP](http://php.net) >=5.4
 * [Bower](http://bower.io)
 
-## Installation a
+## Installation
 
 1. Install Composer in the project directory:
   
