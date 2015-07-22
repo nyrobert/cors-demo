@@ -9,17 +9,17 @@
 
 ## Installation
 
-1. Install Composer in the project directory
+1. Install Composer in the project directory:
   
   ```shell
   curl -sS https://getcomposer.org/installer | php
   ```
-2. Download PHP dependencies via Composer
+2. Download PHP dependencies via Composer:
   
   ```shell
   php composer.phar install
   ```
-3. Download front-end dependencies via Bower
+3. Download front-end dependencies via Bower:
 
   ```shell
   bower install
