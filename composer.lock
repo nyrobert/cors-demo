@@ -5,6 +5,7 @@
         "This file is @generated automatically"
     ],
     "hash": "f6aa154ed15d5d8ad7f42f936c541ee8",
+    "content-hash": "36e674b2cb784a97c0e3c00d4b730d7b",
     "packages": [
         {
             "name": "slim/slim",
