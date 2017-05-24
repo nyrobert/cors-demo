@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  nginx:
+    image: nginx:latest
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    volumes_from:
+      - php
+
+  composer:
+    image: composer/composer
+    working_dir: /var/www/html
+    volumes_from:
+      - php
+
+  php:
+    build: ./docker/php/
+    expose:
+      - 9000
+    volumes:
+      - .:/var/www/html
