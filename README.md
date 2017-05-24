@@ -4,20 +4,20 @@
 
 ## Requirements
 
-* [PHP](http://php.net) >= 5.4
-* [Bower](http://bower.io)
+* [Docker](https://www.docker.com/)
+* [Bower](https://bower.io/)
 
 ## Installation
 
-1. Install Composer in the project directory:
+1. Download PHP dependencies via Composer:
   
   ```shell
-  curl -sS https://getcomposer.org/installer | php
+  docker-compose run composer install
   ```
-2. Download PHP dependencies via Composer:
+2. Boot the Docker containers:
   
   ```shell
-  php composer.phar install
+  docker-compose up -d
   ```
 3. Download front-end dependencies via Bower:
 
@@ -27,7 +27,8 @@
 
 ## Usage
 
-You can call HTTPS and CORS enabled ajax urls from a HTTP-loaded main page.
+Navigate to http://127.0.0.1, where you’ll see the application running.
+You can call HTTPS and CORS enabled ajax urls from the HTTP-loaded main page.
 
 ## License
 
