@@ -12,7 +12,7 @@ services:
       - php
 
   composer:
-    image: composer/composer
+    image: composer:latest
     working_dir: /var/www/html
     volumes_from:
       - php
