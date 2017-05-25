@@ -31,6 +31,20 @@
 Navigate to http://127.0.0.1, where you’ll see the application running.
 You can call HTTPS and CORS enabled ajax urls from the HTTP-loaded main page.
 
+## Testing
+
+Run JSHint checks:
+
+```shell
+  docker-compose -f docker-compose.test.yml run js-tools jshint /src/js
+```
+
+Run JSCS checks:
+
+```shell
+  docker-compose -f docker-compose.test.yml run js-tools jscs /src/js
+```
+
 ## License
 
 This project is licensed under the terms of the [MIT License (MIT)](LICENSE).
