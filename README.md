@@ -5,7 +5,6 @@
 ## Requirements
 
 * [Docker](https://www.docker.com/)
-* [Bower](https://bower.io/)
 
 ## Installation
 
@@ -14,15 +13,17 @@
   ```shell
   docker-compose run composer install
   ```
-2. Boot the Docker containers:
+
+2. Download front-end dependencies via Bower:
+
+  ```shell
+  docker-compose run node bower install
+  ```
+
+3. Boot the Docker containers:
   
   ```shell
   docker-compose up -d
-  ```
-3. Download front-end dependencies via Bower:
-
-  ```shell
-  bower install
   ```
 
 ## Usage
