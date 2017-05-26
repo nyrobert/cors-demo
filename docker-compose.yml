@@ -17,11 +17,11 @@ services:
     volumes_from:
       - php
 
-  node:
-      image: digitallyseamless/nodejs-bower-grunt:latest
-      working_dir: /var/www/html
-      volumes_from:
-        - php
+  js-tools:
+    build: ./docker/js-tools/
+    working_dir: /var/www/html
+    volumes_from:
+      - php
 
   php:
     build: ./docker/php/

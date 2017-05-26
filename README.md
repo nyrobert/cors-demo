@@ -17,7 +17,7 @@
 2. Download front-end dependencies via Bower:
 
   ```shell
-  docker-compose run node bower install
+  docker-compose run js-tools bower install
   ```
 
 3. Boot the Docker containers:
@@ -36,13 +36,13 @@ You can call HTTPS and CORS enabled ajax urls from the HTTP-loaded main page.
 Run JSHint checks:
 
 ```shell
-  docker-compose -f docker-compose.test.yml run js-tools jshint /src/js
+  docker-compose run js-tools jshint js
 ```
 
 Run JSCS checks:
 
 ```shell
-  docker-compose -f docker-compose.test.yml run js-tools jscs /src/js
+  docker-compose run js-tools jscs js
 ```
 
 ## License

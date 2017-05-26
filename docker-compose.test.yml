@@ -1,7 +1,0 @@
-version: '2'
-
-services:
-  js-tools:
-    build: ./docker/js-tools/
-    volumes:
-      - .:/src

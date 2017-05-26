@@ -1,7 +1,4 @@
-FROM node:7-alpine
+FROM node:7
 
-RUN npm install -g jshint jscs
-
-VOLUME /src
-
-WORKDIR /src
+RUN npm install -g bower jshint jscs \
+&& echo '{ "allow_root": true }' > /root/.bowerrc
