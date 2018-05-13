@@ -8,22 +8,25 @@
 
 ## Installation
 
-1. Download PHP dependencies via Composer:
-  
-  ```shell
-  docker-compose run composer install
-  ```
-
-2. Download front-end dependencies via Bower:
-
-  ```shell
-  docker-compose run js-tools bower install
-  ```
-
-3. Boot the Docker containers:
+1. Boot the Docker containers:
   
   ```shell
   docker-compose up -d
+  ```
+
+2. Download [Composer](https://getcomposer.org/download):
+  
+
+3. Download dependencies with Composer
+
+  ```shell
+  docker-compose run --rm --entrypoint php -w /var/www php composer.phar install
+  ```
+
+4. Download front-end dependencies via Bower:
+
+  ```shell
+  docker-compose run js-tools bower install
   ```
 
 ## Usage
