@@ -1,6 +1,7 @@
 .DS_Store
 Thumbs.db
 npm-debug.log
+composer.phar
 /.idea
 /bower_components
 /node_modules

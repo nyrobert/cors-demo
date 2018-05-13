@@ -9,7 +9,7 @@ services:
     ports:
       - 8080:80
 
-  phpserver:
+  php:
     image: php:fpm-alpine
     volumes:
       - ./:/var/www
