@@ -47,6 +47,6 @@ $(function() {
 	}
 
 	function getUrlPrefix() {
-		return location.hostname + location.pathname;
+		return location.hostname + ':' + location.port;
 	}
 });
