@@ -14,38 +14,38 @@
   docker-compose up -d
   ```
 
-2. Download [Composer](https://getcomposer.org/download):
+2. Download [Composer](https://getcomposer.org/download)
   
 
-3. Download dependencies with Composer
+3. Download dependencies with Composer:
 
   ```shell
-  docker-compose run --rm --entrypoint php -w /var/www php composer.phar install
+  docker-compose run --rm -w /var/www --entrypoint php php composer.phar install
   ```
 
-4. Download front-end dependencies via Bower:
+4. Download front-end dependencies with Bower:
 
   ```shell
-  docker-compose run js-tools bower install
+  docker run --rm -it -v `pwd`:/var/www -w /var/www nyrobert/js-tools bower install
   ```
 
 ## Usage
 
-Navigate to http://127.0.0.1, where you’ll see the application running.
-You can call HTTPS and CORS enabled ajax urls from the HTTP-loaded main page.
+Navigate to http://localhost:8080, where you’ll see the application running.
+You can call HTTPS and CORS enabled AJAX urls from the HTTP-loaded main page.
 
 ## Testing
 
 Run JSHint checks:
 
 ```shell
-  docker-compose run js-tools jshint js
+  docker run --rm -it -v `pwd`:/var/www -w /var/www nyrobert/js-tools jshint js
 ```
 
 Run JSCS checks:
 
 ```shell
-  docker-compose run js-tools jscs js
+  docker run --rm -it -v `pwd`:/var/www -w /var/www nyrobert/js-tools jscs js
 ```
 
 ## License
